@@ -1,6 +1,7 @@
 # Table of contents
 
-* [Rust安装](README.md)
+* [介绍](README.md)
+* [Rust安装](<README (1).md>)
   * [Cargo初用](rust-an-zhuang/cargo-chu-yong.md)
   * [其他工具](rust-an-zhuang/qi-ta-gong-ju.md)
 * [实例1](shi-li-1.md)
@@ -11,4 +12,3 @@
     * [NaN](rust-ji-chu/bian-liang-shu-ju-lei-xing/nan.md)
     * [有理数和复数](rust-ji-chu/bian-liang-shu-ju-lei-xing/you-li-shu-he-fu-shu.md)
   * [单元类型](rust-ji-chu/dan-yuan-lei-xing.md)
-* [Page 1](page-1.md)
