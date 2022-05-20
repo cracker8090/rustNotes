@@ -13,3 +13,4 @@
     * [有理数和复数](rust-ji-chu/bian-liang-shu-ju-lei-xing/you-li-shu-he-fu-shu.md)
   * [单元类型](rust-ji-chu/dan-yuan-lei-xing.md)
   * [函数](rust-ji-chu/han-shu.md)
+* [Rust VS C](rust-vs-c.md)
