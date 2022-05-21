@@ -14,3 +14,7 @@
   * [单元类型](rust-ji-chu/dan-yuan-lei-xing.md)
   * [函数](rust-ji-chu/han-shu.md)
 * [Rust VS C](rust-vs-c.md)
+* [所有权](suo-you-quan.md)
+* [所有权基础](suo-you-quan-ji-chu.md)
+* [如何让函数使用某个值，但不获得其所有权](ru-he-rang-han-shu-shi-yong-mou-ge-zhi-dan-bu-huo-de-qi-suo-you-quan.md)
+* [切片](qie-pian.md)
