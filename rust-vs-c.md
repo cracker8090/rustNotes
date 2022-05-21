@@ -1,6 +1,8 @@
-[Learn Rust the Dangerous Way](https://cliffle.com/p/dangerust/) 
+# Rust VS C
 
-## head
+[Learn Rust the Dangerous Way](https://cliffle.com/p/dangerust/)
+
+### head
 
 ```c
 #include <stdint.h>
@@ -16,7 +18,7 @@ use std::arch::x86_64::*;
 use std::f64::consts::PI;
 ```
 
-## strcut
+### strcut
 
 ```c
 // intptr_t should be the native integer type on most 
@@ -46,7 +48,7 @@ struct body {
 
 此`allow` 属性（类似于 a `#pragma`）通知编译器我们希望允许偏离命名约定
 
-`#[repr(C)]`标记`struct`要求 Rust 布局`struct` *与 C 完全相同* ,没有的话它会优化它们以获得最佳的打包和对齐——这可能是你以前手工完成的。
+`#[repr(C)]`标记`struct`要求 Rust 布局`struct` _与 C 完全相同_ ,没有的话它会优化它们以获得最佳的打包和对齐——这可能是你以前手工完成的。
 
 ```c
 #define SOLAR_MASS (4*M_PI*M_PI)
@@ -63,7 +65,7 @@ const BODIES_COUNT: usize = 5;
 
 `#define`s 可以被 Rust 替换`const`，它声明了一个常量
 
-## 函数
+### 函数
 
 ```c
 static void offset_Momentum(body bodies[]){
@@ -94,11 +96,9 @@ unsafe fn offset_Momentum(bodies: *mut body) {
 
 在 C 中，`bodies[i]`完全一样`*(bodies + i)`——它执行指针算术和解引用，仅此而已。特别是，它假定您有理由知道这`i`是数组的有效索引。这是 C 语言中的常见情况，可以使用方括号进行速记。
 
-在 Rust 中，常见用例使用*引用*而不是指针[3](https://cliffle.com/p/dangerust/1/#ref)并进行边界检查，因此*用*例得到简写`bodies[i]`。做未经检查的指针算术是例外而不是规则，因此我们必须更加刻意地表达它。
+在 Rust 中，常见用例使用_引用_而不是指针[3](https://cliffle.com/p/dangerust/1/#ref)并进行边界检查，因此_用_例得到简写`bodies[i]`。做未经检查的指针算术是例外而不是规则，因此我们必须更加刻意地表达它。
 
-最后，我们必须写`*bodies.add(i)`而不是`*(bodies + i)`因为 Rust 不会为指针重载算术运算符。相反，指针提供了`add`、`sub`和其他在代码审查中更容易发现的操作；如果您好奇，[这里是完整列表。](https://doc.rust-lang.org/std/primitive.pointer.html#methods) 
-
-
+最后，我们必须写`*bodies.add(i)`而不是`*(bodies + i)`因为 Rust 不会为指针重载算术运算符。相反，指针提供了`add`、`sub`和其他在代码审查中更容易发现的操作；如果您好奇，[这里是完整列表。](https://doc.rust-lang.org/std/primitive.pointer.html#methods)
 
 ```c
 static void advance(body bodies[]){
