@@ -18,3 +18,4 @@
   * [所有权基础](suo-you-quan/suo-you-quan-ji-chu.md)
   * [如何让函数使用某个值，但不获得其所有权](suo-you-quan/ru-he-rang-han-shu-shi-yong-mou-ge-zhi-dan-bu-huo-de-qi-suo-you-quan.md)
   * [切片](suo-you-quan/qie-pian.md)
+* [模块module和测试](mo-kuai-module-he-ce-shi.md)
