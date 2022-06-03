@@ -18,7 +18,7 @@
   * [结构体和枚举](jie-gou-ti-he-mei-ju.md)
   * [控制语句](kong-zhi-yu-ju.md)
   * [模式匹配match](rust-ji-chu/mo-shi-pi-pei-match.md)
-  * [函数](rust-ji-chu/han-shu.md)
+  * [函数-method](rust-ji-chu/han-shu.md)
 * [Rust进阶](rust-jin-jie/README.md)
   * [所有权](suo-you-quan/README.md)
     * [所有权基础](suo-you-quan/suo-you-quan-ji-chu.md)
