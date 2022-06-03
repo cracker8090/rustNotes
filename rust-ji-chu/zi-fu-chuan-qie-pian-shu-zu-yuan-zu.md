@@ -1,10 +1,8 @@
-# 字符串-切片-数组-元组-hashpmap
+# 字符串-切片-数组-元组
 
 ## `字符串切片`
 
 `String` 是定义在标准库中的类型，分配在堆上，可以动态的增长。它的底层存储是动态字节数组的方式( `Vec<u8>` )，但是与字节数组不同，`String` 是 `UTF-8` 编码。
-
-`&str` 和 `String` 的关系类似于 `&[T]` 和 `Vec<T>` 。
 
 let s = "Hello, world!";
 
@@ -165,9 +163,7 @@ let slice: &[i32] = &a[1..3];
 assert_eq!(slice, &[2, 3]);
 ```
 
-let v: Vec = Vec::new();
-
-> 如果预先知道要存储的元素个数，可以使用 `Vec::with_capacity(capacity)` 创建动态数组，这样可以避免因为插入大量新数据导致频繁的内存分配和拷贝，提升性能。
+``
 
 * 切片的长度可以与数组不同，并不是固定的，而是取决于你使用时指定的起始和结束位置
 * 创建切片的代价非常小，因为切片只是针对底层数组的一个引用
@@ -180,56 +176,6 @@ let v: Vec = Vec::new();
 * **在实际开发中，使用最多的是数组切片\[T]**，我们往往通过引用的方式去使用`&[T]`，因为后者有固定的类型大小
 
 `deref` 隐式强制转换，具体我们会在 [`Deref` 特征](https://course.rs/advance/smart-pointer/deref.html)进行详细讲解。
-
-```rust
-let v = vec![1, 2, 3, 4, 5];
-
-let does_not_exist = &v[100];
-let does_not_exist = v.get(100);
-```
-
-`&v[100]` 的访问方式会导致程序无情报错退出，因为发生了数组越界访问。 但是 `v.get` 就不会，它在内部做了处理，有值的时候返回 `Some(T)`，无值的时候返回 `None`，因此 `v.get` 的使用方式非常安全。
-
-当你确保索引不会越界的时候，就用索引访问，否则用 `.get`。例如，访问第几个数组元素并不取决于我们，而是取决于用户的输入时，用 `.get` 会非常适合。
-
-### 存储不同类型
-
-* 枚举来处理
-* trait
-
-在实际使用场景中，特征对象数组要比枚举数组常见很多，主要原因在于特征对象非常灵活，而编译器对枚举的限制较多，且无法动态增加类型。
-
-```rust
-
-trait IpAddr {
-    fn display(&self);
-}
-
-struct V4(String);
-impl IpAddr for V4 {
-    fn display(&self) {
-        println!("ipv4: {:?}", self.0)
-    }
-}
-struct V6(String);
-impl IpAddr for V6 {
-    fn display(&self) {
-        println!("ipv6: {:?}", self.0)
-    }
-}
-
-#[test]
-fn vec_diff_test() {
-    let v: Vec<Box<dyn IpAddr>> = vec![
-        Box::new(V4("127.0.0.1".to_string())),
-        Box::new(V6("::1".to_string())),
-    ];
-
-    for ip in v {
-        ip.display();
-    }
-}
-```
 
 ## 元组
 
@@ -256,52 +202,6 @@ fn calculate_length(s: String) -> (String, usize) {
     let length = s.len(); // len() 返回字符串的长度
 
     (s, length)
-}
-```
-
-## hashmap
-
-使用 `HashMap` 需要手动通过use std::collections::HashMap;
-
-`HashMap` 也是内聚性的，即所有的 `K` 必须拥有同样的类型，`V` 也是如此。
-
-> 跟 `Vec` 一样，如果预先知道要存储的 `KV` 对个数，可以使用 `HashMap::with_capacity(capacity)` 创建指定大小的 `HashMap`，避免频繁的内存分配和拷贝，提升性能
-
-`HashMap` 的所有权规则与其它 Rust 类型没有区别：
-
-* 若类型实现 `Copy` 特征，该类型会被复制进 `HashMap`，因此无所谓所有权
-* 若没实现 `Copy` 特征，所有权将被转移给 `HashMap` 中
-
-**如果你使用引用类型放入 HashMap 中**，请确保该引用的生命周期至少跟 `HashMap` 活得一样久。
-
-f32 和 f64 浮点数，没有实现 `std::cmp::Eq` 特征，因此不可以用作 `HashMap` 的 `Key。`
-
-> 目前，`HashMap` 使用的哈希函数是 `SipHash`，它的性能不是很高，但是安全性很高。`SipHash` 在中等大小的 `Key` 上，性能相当不错，但是对于小型的 `Key` （例如整数）或者大型 `Key` （例如字符串）来说，性能还是不够好。若你需要极致性能，例如实现算法，可以考虑这个库：[ahash](https://github.com/tkaitchuck/ahash)
-
-先将 `Vec` 转为迭代器，接着通过 `collect` 方法，将迭代器中的元素收集后，转成 `HashMap:`
-
-`into_iter` 方法将列表转为迭代器，接着通过 `collect` 进行收集
-
-```rust
-
-#[test]
-fn vec_to_hashmap_test() {
-    let teams_list = vec![
-        ("中国队".to_string(), 100),
-        ("美国队".to_string(), 10),
-        ("日本队".to_string(), 50),
-    ];
-
-    let mut teams_map = HashMap::new();
-    for team in &teams_list {
-        teams_map.insert(&team.0, &team.1);
-    }
-    println!("{:?}", teams_map);
-
-    // 先将 Vec 转为迭代器，接着通过 collect 方法，将迭代器中的元素收集后，转成 HashMap
-    let teams_map2: HashMap<_, _> = teams_list.into_iter().collect();
-
-    println!("{:?}", teams_map2);
 }
 ```
 
