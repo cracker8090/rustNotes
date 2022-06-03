@@ -78,3 +78,32 @@ fn main() {
 // 错误 没有处理 Direction::West
 ```
 
+使用 `|` 可以匹配多个值, 而使用 `..=` 可以匹配一个闭区间的数值序列
+
+```rust
+match n {
+        // 匹配一个单独的值
+        1 => println!("One!"),
+        // 使用 `|` 填空，不要使用 `..` 或 `..=`
+        __ => println!("match 2 -> 5"),
+        // 匹配一个闭区间的数值序列
+        6..=10 => {
+            println!("match 6 -> 10")
+        },
+        _ => {
+            println!("match 11 -> +infinite")
+        }
+    }
+    
+// @ 操作符可以让我们将一个与模式相匹配的值绑定到新的变量上
+Point { x: 0..=5, y: y@ (10 | 20 | 30) } => println!("On the y axis at {}", y),
+
+// 使用 .. 忽略一部分值
+match numbers {
+        (first,..,last) => {
+           assert_eq!(first, 2);
+           assert_eq!(last, 2048);
+        }
+    }
+
+```
