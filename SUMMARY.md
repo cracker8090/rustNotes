@@ -25,6 +25,6 @@
     * [如何让函数使用某个值，但不获得其所有权](suo-you-quan/ru-he-rang-han-shu-shi-yong-mou-ge-zhi-dan-bu-huo-de-qi-suo-you-quan.md)
     * [切片](suo-you-quan/qie-pian.md)
   * [Rust VS C](rust-vs-c.md)
+  * [函数指针](rust-jin-jie/han-shu-zhi-zhen.md)
 * [参考](can-kao.md)
 * [Q\&A](q-and-a.md)
-* [函数指针](han-shu-zhi-zhen.md)
