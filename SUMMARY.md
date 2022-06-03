@@ -14,7 +14,7 @@
     * [NaN](rust-ji-chu/bian-liang-shu-ju-lei-xing/nan.md)
     * [有理数和复数](rust-ji-chu/bian-liang-shu-ju-lei-xing/you-li-shu-he-fu-shu.md)
   * [单元类型](rust-ji-chu/dan-yuan-lei-xing.md)
-  * [字符串-切片-数组-元组](rust-ji-chu/zi-fu-chuan-qie-pian-shu-zu-yuan-zu.md)
+  * [字符串-切片-数组-元组-hashpmap](rust-ji-chu/zi-fu-chuan-qie-pian-shu-zu-yuan-zu-hashpmap.md)
   * [结构体和枚举](jie-gou-ti-he-mei-ju.md)
   * [控制语句](kong-zhi-yu-ju.md)
   * [模式匹配match](rust-ji-chu/mo-shi-pi-pei-match.md)
