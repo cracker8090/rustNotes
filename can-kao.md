@@ -2,6 +2,12 @@
 
 官方标准库：[https://doc.rust-lang.org/std/index.html](https://doc.rust-lang.org/std/index.html)
 
+rust程序设计语言翻译：[https://kaisery.github.io/trpl-zh-cn](https://kaisery.github.io/trpl-zh-cn)
+
+{% embed url="https://course.rs/" %}
+
+{% embed url="https://zh.practice.rs/" %}
+
 简单编程挑战：[https://exercism.org/](https://exercism.org/)
 
 做 [Rust Quiz](https://dtolnay.github.io/rust-quiz/)

@@ -4,7 +4,7 @@
 
 vscode http插件：thunder client
 
-
+## 介绍
 
 框架参考：[https://course.rs/practice/third-party-libs.html](https://course.rs/practice/third-party-libs.html)
 
@@ -23,3 +23,23 @@ Rocket：入门新手（专注业务）、选择困难、类型安全（追求�
 Warp：小而美、灵活且有中间件需求。
 
 Actix-web：对性能有极致需求。
+
+Python和JavaScript开发，使用像Django、Flask和Express这样的框架。
+
+## 实例web server
+
+
+
+后端由Rust编写，前端是JavaScript+React完成的类似于S3作为图床的应用程序，用户可以做以下事情：
+
+* 浏览图床中所有的图片（分页可选）
+* 上传图片
+* 上传图片时可以给图片增加标签
+* 通过名称进行查询或过滤
+
+参考[Rocket文档](https://rocket.rs/v0.5-rc/guide/getting-started/#getting-started)
+
+rustup default nightly
+
+cargo new my-rocket-server --bin
+
