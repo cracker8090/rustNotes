@@ -31,3 +31,4 @@
 * [cargo watch使用](cargo-watch-shi-yong.md)
 * [lib分类](lib-fen-lei.md)
 * [web server](web-server.md)
+* [Rust的宏](rust-de-hong.md)
