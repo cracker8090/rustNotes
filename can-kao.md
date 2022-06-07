@@ -31,3 +31,5 @@ rust程序设计语言翻译：[https://kaisery.github.io/trpl-zh-cn](https://ka
 微软学rust：[https://docs.microsoft.com/zh-cn/shows/beginners-series-to-rust/?wt.mc\_id=academic-29077-cxa\&page=3](https://docs.microsoft.com/zh-cn/shows/beginners-series-to-rust/?wt.mc\_id=academic-29077-cxa\&page=3)
 
 王yin [https://zhuanlan.zhihu.com/p/382174889](https://zhuanlan.zhihu.com/p/382174889)
+
+[https://rustcc.cn/](https://rustcc.cn/)

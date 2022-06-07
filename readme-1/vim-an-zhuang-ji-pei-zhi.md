@@ -7,3 +7,5 @@
 vim配置：[https://github.com/yangyangwithgnu/use\_vim\_as\_ide](https://github.com/yangyangwithgnu/use\_vim\_as\_ide)
 
 插件升级：:PluginInstall
+
+配置vim版本：update-alternatives --config vim

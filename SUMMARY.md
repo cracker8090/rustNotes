@@ -40,4 +40,4 @@
 * [智能指针](zhi-neng-zhi-zhen.md)
 * [Rust类似electron的框架](rust-lei-si-electron-de-kuang-jia.md)
 * [Tokio包使用](tokio-bao-shi-yong.md)
-* [Rust deno wasm介绍](rust-deno-wasm-jie-shao.md)
+* [Rust wasm介绍](rust-wasm-jie-shao.md)
