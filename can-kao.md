@@ -8,6 +8,8 @@ rust程序设计语言翻译：[https://kaisery.github.io/trpl-zh-cn](https://ka
 
 {% embed url="https://zh.practice.rs/" %}
 
+{% embed url="https://doc.rust-lang.org/rust-by-example/index.html" %}
+
 简单编程挑战：[https://exercism.org/](https://exercism.org/)
 
 做 [Rust Quiz](https://dtolnay.github.io/rust-quiz/)
