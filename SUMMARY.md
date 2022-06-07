@@ -38,3 +38,6 @@
 * [参考](can-kao.md)
 * [rust内存泄露](rust-nei-cun-xie-lou.md)
 * [智能指针](zhi-neng-zhi-zhen.md)
+* [Rust类似electron的框架](rust-lei-si-electron-de-kuang-jia.md)
+* [Tokio包使用](tokio-bao-shi-yong.md)
+* [Rust deno wasm介绍](rust-deno-wasm-jie-shao.md)
