@@ -32,4 +32,17 @@ rust程序设计语言翻译：[https://kaisery.github.io/trpl-zh-cn](https://ka
 
 王yin [https://zhuanlan.zhihu.com/p/382174889](https://zhuanlan.zhihu.com/p/382174889)
 
-[https://rustcc.cn/](https://rustcc.cn/)
+{% embed url="https://rustcc.cn/" %}
+
+rust群组：[https://t.me/rust\_zh](https://t.me/rust\_zh)
+
+群内容搜索：[网址](https://luoxu-web.vercel.app/#g=1264662201)
+
+常见问题：[汇总](https://rust-zh.github.io/faq/)贴 [play](https://app.gitbook.com/o/fbdUOcV1sZDVyyc9JICL/s/za2MjaB8cXMPcmI0itTp/)
+
+一篇学习rust方法的外文：[https://bitsbybrad.com/2020-09-29-learning-rust/](https://bitsbybrad.com/2020-09-29-learning-rust/)
+
+为新手的开源项目：[reddit Good open source projects for Rust beginners](https://www.reddit.com/r/rust/comments/gxadbu/good\_open\_source\_projects\_for\_rust\_beginners/)，
+
+微软新手：[https://docs.microsoft.com/zh-cn/learn/paths/rust-first-steps/](https://docs.microsoft.com/zh-cn/learn/paths/rust-first-steps/)
+
