@@ -21,7 +21,7 @@ fork：函数创建子进程，通常情况用来执行另一个程序的，如�
 
 exec函数族
 
-<img src="../.gitbook/assets/image (1).png" alt="" data-size="original">
+![](https://raw.githubusercontent.com/cracker8090/imgbed/master/blogImg/exec%E5%87%BD%E6%95%B0%E5%85%B3%E7%B3%BB.png)
 
 vfork 和fork 之间的另一个区别是：vfork 保证子进程先运行，在她调用exec 或exit 之后父进程才可能被调度运行。如果在调用这两个函数之前子进程依赖于父进程的进一步动作，则会导致死锁。
 
@@ -43,5 +43,5 @@ wait阻塞、waitpid不阻塞
 
 进程线程比较
 
-![](../.gitbook/assets/image.png)
+![](https://raw.githubusercontent.com/cracker8090/imgbed/master/blogImg/%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E5%8E%9F%E8%AF%AD%E6%AF%94%E8%BE%83.png)
 
