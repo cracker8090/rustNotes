@@ -46,6 +46,7 @@
 * [Rust wasm介绍](rust-wasm-jie-shao.md)
 * [多线程](duo-xian-cheng/README.md)
   * [C语言](duo-xian-cheng/c-yu-yan.md)
-* [Golang语言](golang-yu-yan.md)
+* [Golang语言](golang-yu-yan/README.md)
+  * [项目](golang-yu-yan/xiang-mu.md)
 * [Java](java.md)
 * [Javascript](javascript.md)
